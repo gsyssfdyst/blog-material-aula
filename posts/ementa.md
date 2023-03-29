@@ -38,14 +38,14 @@ index: false
 ## Ementa
 
 - Modularização
-Funções
-Estruturas
-Recursividade
-Passagem de parâmetros por valor
-Passagem de parâmetros por referência
-Ponteiros
-Alocação dinâmica
-Arquivos.
+- Funções
+- Estruturas
+- Recursividade
+- Passagem de parâmetros por valor
+- Passagem de parâmetros por referência
+- Ponteiros
+- Alocação dinâmica
+- Arquivos.
 
 ## Objetivos
 - Continuar o desenvolvimento dos conceitos básicos de lógica de programação, estimulando o raciocínio lógico e estruturado para resolver problemas e desenvolver algoritmos, praticando conceitos com uso de uma linguagem de programação estruturada.
@@ -53,21 +53,21 @@ Arquivos.
 
 ## Conteúdo programático
 1. Introdução
-  1. Lógica e Lógica de Programação
-  1. Algoritmos – Definição e estratégias de construção de algoritmos
-  1. Representação de algoritmos - Fluxogramas
-  1. Armazenamento de dados – variáveis
-  1. Decisão em Fluxogramas
+    1. Lógica e Lógica de Programação
+    1. Algoritmos – Definição e estratégias de construção de algoritmos
+    1. Representação de algoritmos - Fluxogramas
+    1. Armazenamento de dados – variáveis
+    1. Decisão em Fluxogramas
 1. Introdução à linguagem C
-  1. Linguagens de programação, compiladores, interpretadores
-  1. Tipos de dados e operadores da linguagem
-  1. Entrada e saída de dados
-  1. Estruturas de seleção
-  1. Estruturas de repetição
-  1. Vetores e matrizes
+    1. Linguagens de programação, compiladores, interpretadores
+    1. Tipos de dados e operadores da linguagem
+    1. Entrada e saída de dados
+    1. Estruturas de seleção
+    1. Estruturas de repetição
+    1. Vetores e matrizes
 1. Modularização
-  1. Funções com retorno
-  1. Funções sem retorno
+    1. Funções com retorno
+    1. Funções sem retorno
 1. Estruturas
 1. Recursão
 1. Ponteiros
