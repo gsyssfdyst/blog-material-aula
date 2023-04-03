@@ -1,10 +1,6 @@
 import { defineUserConfig } from "vuepress";
-//import { searchPlugin } from '@vuepress/plugin-search'
-//import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
-import { getDirname, path } from '@vuepress/utils'
+import { pwaPlugin } from "vuepress-plugin-pwa2";
 import umlPlugin from 'markdown-it-plantuml';
-
-const __dirname = getDirname(import.meta.url)
 
 import theme from "./theme.js";
 
@@ -20,19 +16,18 @@ export default defineUserConfig({
   title: "Blog Aulas",
   description: "Material de aulas",
 
+  plugins: [
+    pwaPlugin({
+      // your options
+    }),
+  ],
+
   extendsMarkdown: (md) => {    
     md.use(umlPlugin, {openMarker: '```plantuml', closeMarker: '```'})
   },
 
 
   theme,
-
-  //plugins: [
-  //  searchPlugin({}),
-  //  registerComponentsPlugin({
-  //    componentsDir: path.resolve(__dirname, './components'),
-  //  }),
-  //],
 
   shouldPrefetch: false,
 
