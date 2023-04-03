@@ -9,7 +9,7 @@ export default defineUserConfig({
   base : "blog-material-aula",
     
   head: [
-    ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
+    ['link', { rel: 'manifest', href: '/blog-material-aula/manifest.webmanifest' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
   ],
   lang: "pt-BR",
