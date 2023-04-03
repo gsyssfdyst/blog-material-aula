@@ -97,3 +97,4 @@ O processo de avaliação dar-se-á ao longo do desenvolvimento da disciplina. C
 - ZIVIANI, N. **Projeto de Algoritmos –com implementação em Pascal e C**. 3.ed. Cengage Learning, 2010.
 
 
+[Material Estudo](https://github.com/20231-ifba-saj-ads-lpr/material-complementar/blob/main/README.md)
