@@ -28,6 +28,10 @@ Apresentação das orientações apresentadas no Livro __Aprendendo Inteligênci
 - 📈 Chat GPT é um dos sinais de que muita coisa mudou na inteligência artificial e seus impactos.
 - 🗞️ Jornais criam sessões de inteligência artificial para discutir o futuro da tecnologia e de nossa sociedade.
 
+## Aprendendo programação 
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pdhqwbUWf4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Ementa
 
