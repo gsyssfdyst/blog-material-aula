@@ -51,15 +51,8 @@ export default hopeTheme({
     toc: "Nesta Página",
   },
 
-  encrypt: {
-    config: {
-      "/guide/encrypt.html": ["1234"],
-    },
-  },
 
   plugins: {
-
-    pwa: true,
 
     blog: {
       // only files under posts are articles
