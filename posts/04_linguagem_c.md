@@ -115,7 +115,7 @@ Assim, se quiséssemos escrever uma única expressão com o comando `printf()`, 
 
 ```c
 printf("%tipo", expressão);
-printf("%tipo1","%tipo2", expressão1, expressão2);
+printf("%tipo1 %tipo2", expressão1, expressão2);
 ```
 
 Note que os formatos e as expressões a serem escritas com aquele formato devem ser especificados na mesma ordem. Além disso, as variáveis e/ou expressão devem ser separadas por vírgulas.
