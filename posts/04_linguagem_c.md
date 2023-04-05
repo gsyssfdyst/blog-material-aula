@@ -11,6 +11,9 @@ order: 4
 ---
 
 # Esqueleto de um programa em linguagem c
+
+[^BACKES] [^SOFFNER]
+
 Todo programa escrito em linguagem C que vier a ser desenvolvido deve possuir o esqueleto mostrado no código-fonte abaixo.
 
 ```c
@@ -126,3 +129,104 @@ Note que os formatos e as expressões a serem escritas com aquele formato devem 
 | %s       | escrita de vários caracteres                     |
 | %p       | escrita de um endereço de memória                |
 | %e ou %E | escrita em notação científica                    |
+
+### Scanf
+
+A função `scanf()` é uma das funções de entrada/leitura de dados da linguagem C. Seu nome vem da expressão em inglês scan formatted, ou seja, leitura formatada. Basicamente, a função `scanf()` lê do teclado um conjunto de valores, caracteres e/ou sequência de caracteres, de acordo com o formato especificado. A forma geral da função `scanf()` é:
+
+```c
+scanf("tipos de entrada", lista de variáveis)
+```
+
+A função `scanf()` recebe dois parâmetros de entrada:
+- *"tipos de entrada"*: conjunto de caracteres que especifica o formato dos dados a serem lidos.
+- *lista de variáveis*: conjunto de nomes de variáveis que serão lidos e separados por vírgula, em que cada nome de variável é precedido pelo operador \&.
+
+Os *tipo de entrada* especificam o formato de entrada dos dados que serão lidos pela função `scanf()`. Cada tipo de entrada é precedido por um sinal de \%, e um tipo de entrada deve ser especificado para cada variável a ser lida. Assim, se quiséssemos ler uma única variável com o comando `scanf()`, faríamos: 
+
+```c
+scanf("%tipo", &variavel)
+```
+
+Se fossem duas as variáveis a serem lidas, faríamos:
+
+```c
+scanf("%tipo1","%tipo2", &variavel1, &variavel2)
+```
+
+e assim por diante. Note que os formatos e as variáveis que armazenarão o dado com aquele formato  devem  ser  especificados  na  mesma  ordem. Além disso, as variáveis devem ser separadas por vírgulas.
+
+:::warning 
+Na linguagem C, é necessário colocar o símbolo \& antes do nome de cada variável a ser lida pelo comando `scanf()`.
+:::
+
+Todas as variáveis que receberão valores do teclado por meio de `scanf()` deverão ser passadas pelos seus endereços. Isso se faz colocando o operador de endereço "&" antes do nome da variável.
+
+A função `scanf()` pode ser usada para ler praticamente qualquer tipo de dado. No entanto, ela é usada com mais frequência para a leitura de números inteiros e/ou de ponto flutuante (números reais). A Tabela abaixo mostra alguns dos tipos de saída suportados pela linguagem.
+
+| Tipo     | Leitura de dado                           |
+| -------- | ----------------------------------------- |
+| %c       | leitura de um caractere (char)            |
+| %d ou %i | leitura de números inteiros (int ou char) |
+| %f       | leitura de número reais (float ou double) |
+| %s       | leitura de vários caracteres              |
+[Tipos de leituras de dados]
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+int main(){  
+  int x,z;
+  float y
+  //Leitura de um valor inteiro
+  scanf("%d",&x);
+  //Leitura de um valor real
+  scanf("%f",&y);
+  //Leitura de um valor inteiro e outro real
+  scanf("%d%f",&x,&y);
+  //Leitura de dois valores inteiros
+  scanf("%d%d",&x,&z);
+  //Leitura de dois valores inteiros com espaco
+  scanf("%d %d",&x,&z);  
+  system("pause");
+  return 0;
+}
+```
+
+Nesse exemplo, os comandos 
+```c
+scanf("%d%d",&x,&z); 
+```
+e 
+```c
+scanf("%d %d",&x,&z);
+```
+são equivalentes. Isso ocorre porque o comando `scanf()` ignora os espaços em branco entre os tipos de entrada. Além disso, quando o comando `scanf()` é usado para ler dois ou mais valores, podemos optar por duas formas de digitar os dados no teclado:
+
+- Digitar um valor e, em seguida, pressionar a tecla *ENTER*. Fazer isso para cada valor a ser digitado.
+- Digitar todos os valores separados por espaço e, por último, pressionar a tecla *ENTER*.
+
+O comando `scanf()` ignora apenas os espaços em branco entre os tipos de entrada. Qualquer outro caractere inserido entre os tipos de dados deverá ser digitado pelo usuário, mas será descartado pelo programa.
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+int main(){  
+  int dia, mes, ano;
+  //Leitura de tres valores inteiros
+  //com barras entre eles
+  scanf("%d/%d/%d",&dia,&mes,&ano);
+  system("pause");  
+  return 0;
+}
+```
+
+No exemplo acima, o comando `scanf()` é usado para a entrada de três valores inteiros separados por uma barra ("/") cada(dados  formatados como uma data: *dia/mês/ano*). Quando o usuário for digitar os três valores, será obrigado a digitar os três valores separados por barra (as barras serão descartadas e não interferem nos dados). 
+
+## Exercícios
+
+[Exercício](exercicios/01_estrutura_c.md)
+
+## Referências
+
+@include(../bib/bib.md)
