@@ -151,7 +151,7 @@ scanf("%tipo", &variavel)
 Se fossem duas as variáveis a serem lidas, faríamos:
 
 ```c
-scanf("%tipo1","%tipo2", &variavel1, &variavel2)
+scanf("%tipo1 %tipo2", &variavel1, &variavel2)
 ```
 
 e assim por diante. Note que os formatos e as variáveis que armazenarão o dado com aquele formato  devem  ser  especificados  na  mesma  ordem. Além disso, as variáveis devem ser separadas por vírgulas.
