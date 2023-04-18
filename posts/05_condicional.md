@@ -31,8 +31,10 @@ Uma condição em um programa pode conter expressões relacionais usando os oper
 
 ## Estrutura
 
+[^MANZANO]
+
 ::: tip 
-A estrutura que permite desviar o l uxo do programa é denominada de estrutura condicional, estrutura de seleção ou estrutura de controle [^MANZANO]
+A estrutura que permite desviar o l uxo do programa é denominada de estrutura condicional, estrutura de seleção ou estrutura de controle 
 :::
 
 ```plantuml
