@@ -36,6 +36,7 @@ Uma condição em um programa pode conter expressões relacionais usando os oper
 ::: tip 
 A estrutura que permite desviar fluxo do programa é denominada de estrutura condicional, estrutura de seleção ou estrutura de controle 
 :::
+<figure>
 
 ```plantuml
 @startuml
@@ -45,13 +46,13 @@ digraph G {
      graph [splines=ortho, nodesep=1.5]
 
      ini[shape=ellipse label="In\ício"  style=filled fillcolor="navy" fontcolor="white"];
-     Nota1Nota2Nota3[shape=invtrapezium label="Nota1,Nota2,Nota3" style=filled fillcolor="cornflowerblue" fontcolor="white"];
+     Nota1Nota2Nota3[shape=invtrapezium label="Nota1,Nota2,Nota3" style=filled fillcolor="cornflowerblue" fontcolor="white" width=2.2 fixedsize=shape];
      media[shape=box label="media<-(Nota1+Nota2+Nota3)/3" style=filled fillcolor="steelblue" fontcolor="white"];
      testemediaap[shape=diamond label="Media >= 7" style=filled fillcolor="darkorange" fontcolor="white"];
      testemediarp[shape=diamond label="Media < 2.5" style=filled fillcolor="darkorange" fontcolor="white"];
-     apro[shape=parallelogram label="Aluno passado por média" style=filled fillcolor="forestgreen" fontcolor="white"];
-     reco[shape=parallelogram label="Aluno Reprovado" style=filled fillcolor="forestgreen" fontcolor="white"];
-     final[shape=parallelogram label="Aluno na Final" style=filled fillcolor="forestgreen" fontcolor="white"];
+     apro[shape=parallelogram label="Aluno passado por média" style=filled fillcolor="forestgreen" fontcolor="white" width=2.7 fixedsize=shape];
+     reco[shape=parallelogram label="Aluno Reprovado" style=filled fillcolor="forestgreen" fontcolor="white" width=2 fixedsize=shape];
+     final[shape=parallelogram label="Aluno na Final" style=filled fillcolor="forestgreen" fontcolor="white" width=2 fixedsize=shape];
      joinrepo,joinap[shape=point label="" style=filled fillcolor="navy" fontcolor="white"  width=0.2 fixedsize=true ];
      fim[shape=ellipse label="Fim"  style=filled fillcolor="navy" fontcolor="white"];
      
@@ -66,6 +67,9 @@ digraph G {
 }
 @enduml
 ```
+
+<figcaption>Exemplo de Fluxigrama</figcaption>
+</figure>
 
 ## Comando IF
 
@@ -89,6 +93,12 @@ Na execução do comando if a condição será avaliada e:
 #include <stdio.h>
 #include <stdlib.h>
 int main(){
+    int num;
+    printf("Digite um numero: \n");
+    scanf("%d",&num);
+    if(num > 10){
+        printf("O numero e maior do que 10");
+    }        
     system("pause");  
     return 0;
 }
@@ -104,12 +114,37 @@ public class Programa{
         System.out.println("Digite um numero: ");
         num = teclado.nextInt();
         if(num > 10){
-            System.out.println ("O numero e maior do que 10\n");
-        }
-        
+            System.out.println ("O numero e maior do que 10");
+        }        
     }
 }
 ```
+
+@tab:active fluxograma
+
+```plantuml
+@startuml
+digraph G {
+     graph [nodesep=0.5 ranksep=0.5];
+     graph [splines=ortho, nodesep=0.5]
+
+     ini[shape=ellipse label="In\ício"  style=filled fillcolor="navy" fontcolor="white"];
+     p1[shape=invtrapezium label="num" style=filled fillcolor="cornflowerblue" fontcolor="white" width=2.2 fixedsize=shape];
+     c1[shape=diamond label="num > 10" style=filled fillcolor="darkorange" fontcolor="white"];
+     c1p1[shape=parallelogram label="O numero e maior do que 10" style=filled fillcolor="forestgreen" fontcolor="white" width=3 fixedsize=shape];
+     c1join[shape=point label="" style=filled fillcolor="navy" fontcolor="white"  width=0.2 fixedsize=true ];
+     fim[shape=ellipse label="Fim"  style=filled fillcolor="navy" fontcolor="white"];
+     
+     ini->p1->c1->c1join->fim
+     {rank = same; c1;c1p1}
+     c1->c1p1[xlabel=Sim]
+     c1p1->c1join[constraint=false]
+     
+}
+@enduml
+```
+
+
 :::
 
 
