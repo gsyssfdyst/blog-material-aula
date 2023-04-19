@@ -1,11 +1,11 @@
 ---
 icon: edit
-date: 2023-04-05 20:20:00.00 -3
+date: 2023-04-12 20:20:00.00 -3
 tag:
   - condicional
 category:
   - Aula
-order: 4
+order: 5
 ---
 
 # Condicionais
@@ -34,7 +34,7 @@ Uma condição em um programa pode conter expressões relacionais usando os oper
 [^MANZANO]
 
 ::: tip 
-A estrutura que permite desviar o l uxo do programa é denominada de estrutura condicional, estrutura de seleção ou estrutura de controle 
+A estrutura que permite desviar fluxo do programa é denominada de estrutura condicional, estrutura de seleção ou estrutura de controle 
 :::
 
 ```plantuml
@@ -81,8 +81,9 @@ Na execução do comando if a condição será avaliada e:
 - Se a condição for **verdadeira**, a sequência de comandos será executada.
 - Se a condição for **falsa**, a sequência de comandos não será executada, e o progra-ma continuará a partir do primeiro comando seguinte ao final do comando if.
 
-<code-group>
-<code-block title="c">
+::: code-tabs
+
+@tab c
 
 ```c
 #include <stdio.h>
@@ -92,9 +93,8 @@ int main(){
     return 0;
 }
 ```
-</code-block>
+@tab java
 
-<code-block title="java">
 ```java
 import java.util.Scanner;
 public class Programa{
@@ -110,8 +110,7 @@ public class Programa{
     }
 }
 ```
-</code-block>
-</code-group>
+:::
 
 
 
